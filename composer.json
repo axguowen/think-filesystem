@@ -1,0 +1,30 @@
+{
+    "name": "axguowen/think-filesystem",
+    "description": "The ThinkPHP6.1 Filesystem Package For PHP5.6",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "axguowen",
+            "email": "axguowen@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "think\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "think\\tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=5.6.0",
+        "topthink/framework": "^6.1",
+        "league/flysystem": "^1.0.70",
+        "league/flysystem-cached-adapter": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
