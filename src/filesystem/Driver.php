@@ -40,7 +40,7 @@ abstract class Driver
      */
     protected $config = [];
 
-    public function __construct(Cache $cache, $config)
+    public function __construct(Cache $cache, array $config)
     {
         $this->cache  = $cache;
         $this->config = array_merge($this->config, $config);
@@ -109,7 +109,7 @@ abstract class Driver
      * @param array $options 参数
      * @return bool|string
      */
-    public function putFile($path, File $file, $rule = null, $options = [])
+    public function putFile($path, File $file, $rule = null, array $options = [])
     {
         return $this->putFileAs($path, $file, $file->hashName($rule), $options);
     }
@@ -122,7 +122,7 @@ abstract class Driver
      * @param array $options 参数
      * @return bool|string
      */
-    public function putFileAs($path, File $file, $name, $options = [])
+    public function putFileAs($path, File $file, $name, array $options = [])
     {
         $stream = fopen($file->getRealPath(), 'r');
         $path   = trim($path . '/' . $name, '/');
